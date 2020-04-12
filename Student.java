@@ -1,3 +1,30 @@
+class Faculty {
+
+	List<Student> students;
+
+	public Faculty() {
+		this.students = new ArrayList<Student>();
+
+	}
+
+	public void addStudent(Student student) {
+		this.students.add(student)
+	}
+
+	public void removeStudent(Student student) {
+		this.students.remove(student)
+	}
+
+	public double avgGrades() {
+		double sum=0;
+		for (int i = 0; i < students.size(); i++) {
+			sum+=students.get(i).getAverage();
+		}
+		return sum/students.size();
+	}
+
+}
+
 class Student {
 	String index;
 	String firstName;
@@ -67,3 +94,4 @@ class Student {
 		return krediti;
 	}
 }
+
